@@ -29,14 +29,10 @@ draggables.forEach(draggable => {
         e.preventDefault();
         // Ensure that we're not swapping the element with itself
         if (draggedItem !== e.target) {
-			console.log(draggedItem.src);
-			console.log(e.target.src);
             // Swapping the background images of the dragged item and the drop target
             let tempImage = draggedItem.src;
             draggedItem.src = e.target.src;
-            e.target.src = tempImage.src;
-			console.log(draggedItem.src);
-			console.log(e.target.src);
+            e.target.src = tempImage;
         }
     });
 });
